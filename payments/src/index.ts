@@ -7,6 +7,8 @@ import { natsWrapper } from "./nats-wrapper";
 
 // Connect to MongoDB and start the express server
 const start = async () => {
+    console.log("Starting up...");
+
     if (!process.env.JWT_KEY) {
         throw new Error("Environment variable JWT_KEY must be defined");
     }
